@@ -1,28 +1,29 @@
 import "./App.css";
-
+import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1> Weather App</h1>
+        <Weather />
         <footer>
-          coded by
+          This project was coded by
           <a
             href="https://github.com/Moredebbs"
             target="_blank"
             rel="noreferrer"
           >
+            {" "}
             Moyinoluwa Owoeye
-          </a>
-          is
+          </a>{" "}
+          is{" "}
           <a
             href="https://github.com/Moredebbs/react-weather-app-project"
             target="_blank"
             rel="noreferrer"
           >
             open-sourced on Github
-          </a>
-          and
+          </a>{" "}
+          and{" "}
           <a
             href="https://react-mi-clima.netlify.app/"
             target="_blank"
