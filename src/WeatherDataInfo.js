@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 export default function WeatherDataInfo(props) {
+  const [unit, setUnit] = useState("celsius");
   return (
     <div className="WeatherDataInfo">
       <div className="Weather-info mt-3 ">
@@ -10,9 +12,8 @@ export default function WeatherDataInfo(props) {
             alt={props.data.description}
             className="float-left"
           />
+          <WeatherTemperature celsius={props.data.temperature} />
 
-          <span className="temperature">{props.data.temperature}</span>
-          <span className="units">°C</span>
           <div className="row weather-features">
             <div className="col-6">Humidity:{props.data.humidity}%</div>
             <div className="col-7">Wind: {props.data.wind} km/h</div>
