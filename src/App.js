@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Weather from "./Weather";
 function App() {
@@ -7,11 +8,7 @@ function App() {
         <Weather defaultCity="London" />
         <footer>
           This project was coded by
-          <a
-            href="https://github.com/Moredebbs"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://github.com/Moredebbs" target="_blank" rel="noopener">
             {" "}
             Moyinoluwa Owoeye
           </a>{" "}
@@ -19,7 +16,7 @@ function App() {
           <a
             href="https://github.com/Moredebbs/react-weather-app-project"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener"
           >
             open-sourced on Github
           </a>{" "}
@@ -27,7 +24,7 @@ function App() {
           <a
             href="https://react-mi-clima.netlify.app/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener"
           >
             hosted on Netlify
           </a>
