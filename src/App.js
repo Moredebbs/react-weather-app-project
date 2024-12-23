@@ -8,7 +8,11 @@ function App() {
         <Weather defaultCity="London" />
         <footer>
           This project was coded by
-          <a href="https://github.com/Moredebbs" target="_blank" rel="noopener">
+          <a
+            href="https://github.com/Moredebbs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {" "}
             Moyinoluwa Owoeye
           </a>{" "}
@@ -16,7 +20,7 @@ function App() {
           <a
             href="https://github.com/Moredebbs/react-weather-app-project"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             open-sourced on Github
           </a>{" "}
@@ -24,7 +28,7 @@ function App() {
           <a
             href="https://react-mi-clima.netlify.app/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             hosted on Netlify
           </a>
