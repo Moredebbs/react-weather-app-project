@@ -3,12 +3,13 @@ import axios from "axios";
 import "./Weather.css";
 import WeatherDataInfo from "./WeatherDataInfo";
 import WeatherForecast from "./WeatherForecast";
+
 export default function Weather(props) {
-  const [weatherData, setweatherData] = useState({ ready: false });
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
-    console.log(response.data);
-    setweatherData({
+    setWeatherData({
       ready: true,
       coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
@@ -20,19 +21,22 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
     });
   }
-  function search() {
-    const apikey = "cabdbda40038ba7d1165b953b1c7bd6c";
 
-    let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
-    axios.get(apiurl).then(handleResponse);
-  }
   function handleSubmit(event) {
     event.preventDefault();
     search();
   }
+
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+
+  function search() {
+    const apikey = "4b3503b2f08a729413c4d33ef1186004";
+    let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+    axios.get(apiurl).then(handleResponse);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">

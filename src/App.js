@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
 import Weather from "./Weather";
-function App() {
+
+export default function App() {
   return (
     <div className="App">
       <div className="container">
         <Weather defaultCity="London" />
+
         <footer>
           This project was coded by
           <a
@@ -37,5 +39,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
